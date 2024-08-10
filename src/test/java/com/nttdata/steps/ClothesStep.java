@@ -26,7 +26,6 @@ public class ClothesStep {
         WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(ClothesPage.categoryMenuContainer));
 
-        // Hacer clic en "Men"
         WebElement menElement = driver.findElement(ClothesPage.menLink);
         menElement.click();
     }

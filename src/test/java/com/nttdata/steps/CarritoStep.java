@@ -44,11 +44,9 @@ public class CarritoStep {
         WebElement modalElement = wait.until(ExpectedConditions.visibilityOfElementLocated(CarritoPage.confirmationPopup));
         WebElement messageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(CarritoPage.confirmationMessage));
 
-        // Obtén el texto del mensaje
         String actualMessage = messageElement.getText().trim();
         System.out.println("Texto del mensaje en el modal: " + actualMessage);
 
-        // Ajusta el mensaje esperado
         String cleanedMessage = actualMessage.replaceAll("[^\\p{Print}]", "").trim();
         String cleanedExpectedMessage = expectedMessage.replaceAll("[^\\p{Print}]", "").trim();
 
