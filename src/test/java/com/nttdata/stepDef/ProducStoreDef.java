@@ -94,4 +94,12 @@ public class ProducStoreDef {
         screenShot();
     }
 
+    @And("agrego algo {int}")
+    public void agregoalgo(int cantidad) {
+        CarritoStep carritoStep = new CarritoStep(driver);
+        carritoStep.selectProduct();
+        carritoStep.increaseQuantity(cantidad - 7);
+        carritoStep.addToCart();
+        screenShot();
+    }
 }

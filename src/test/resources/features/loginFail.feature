@@ -1,4 +1,4 @@
-
+@AllTest
 Feature: Product - Store
 
   @LoginFail
